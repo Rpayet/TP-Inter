@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Timer - {{ parent() }}{% endblock %}
+
+{% block body %}
+
+    <h1>{{ timer }}</h1>
+
+    <a href="{{ path('app_time')}}">Retour</a>
+    
+{% endblock %}
