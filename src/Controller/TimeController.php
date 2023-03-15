@@ -11,8 +11,6 @@ class TimeController extends AbstractController
     #[Route('/time', name: 'app_time')]
     public function index(): Response
     {
-        return $this->render('time/index.html.twig', [
-            'controller_name' => 'TimeController',
-        ]);
+        return $this->render('time/index.html.twig');
     }
 }
