@@ -7,8 +7,12 @@
     <h1>Affiche une couleur à l'écran dynamiquement</h1>
 
     <ul>
-        <li><a href="">Blue</a></li>
-        <li><a href="">Red</a></li>
+        {% for color in colors %}
+            <li>
+                <a href="{{ path('app_show', { color : color }) }}">{{ color }}</a>
+                
+            </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
