@@ -20,7 +20,9 @@ class SearchController extends AbstractController
     #[Route('/search/show', name: 'app_search_show')]
     public function show(Request $request): Response
     {
-        return $this->render('search/show.html.twig');
+        return $this->render('search/show.html.twig',[
+            'result' => $request->get('search'),
+        ]);
     }
 
 }
