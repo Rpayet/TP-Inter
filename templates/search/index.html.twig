@@ -4,9 +4,12 @@
 
 {% block body %}
 
-<div class="input-group w-50 m-auto mt-5">
-  <input type="search" class="form-control rounded" placeholder="Entrer une recherche"/>
+<form class="input-group w-50 m-auto mt-5" method="get" action="">
+
+  <input type="search" class="form-control rounded" placeholder="Entrer une recherche" name="search" value="{{ app.request.get('search') }}"/>
   <button type="button" class="btn btn-outline-primary">Recherche</button>
-</div>
+
+</form>
+
 
 {% endblock %}
