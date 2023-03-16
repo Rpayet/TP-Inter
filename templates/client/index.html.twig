@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Client REquest - {{ parent() }} {% endblock %}
+
+{% block body %}
+
+    {# On passe à la vue le paramètres 'ip' du controller "ClientController" #}
+    <h1>{{ ip }}</h1>
+
+{% endblock %}
