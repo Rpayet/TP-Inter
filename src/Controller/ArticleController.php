@@ -10,13 +10,16 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController extends AbstractController
 {
     protected $items = [];
+    
 
     public function __construct()
     {
+        $date = new DateTime();
+
         $this->items = [
-            ['title' => 'Mug', 'text' => 'Disfrutar un buen café', 'publishedAt' => new DateTime(), 'author' => 'Billy'],
-            ['title' => 'Chair', 'text' => 'Take a good sit', 'publishedAt' => new DateTime(), 'author' => 'Paul'],
-            ['title' => 'Pillow', 'text' => 'Have a good naptime', 'publishedAt' => new DateTime(), 'author' => 'Franck'],
+            ['title' => 'Mug', 'text' => 'Disfrutar un buen café', 'publishedAt' => $date->format('Y-m-d'), 'author' => 'Billy'],
+            ['title' => 'Chair', 'text' => 'Take a good sit', 'publishedAt' => $date->format('Y-m-d'), 'author' => 'Paul'],
+            ['title' => 'Pillow', 'text' => 'Have a good naptime', 'publishedAt' => $date->format('Y-m-d'), 'author' => 'Franck'],
         ];
     }
 

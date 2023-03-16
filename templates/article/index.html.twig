@@ -6,11 +6,26 @@
 
 <h1>Liste d'articles</h1>
 <div>
-    <ul>
-        {% for item in items %}
-            <li>{{ item.title }}</li>
-            
-        {% endfor %}
-    </ul>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Date de publication</th>
+                <th>Auteur</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+                <tr>
+                    <th>{{ item.title }}</th>
+                    <th>{{ item.text }}</th>
+                    <th>{{ item.publishedAt }}</th>
+                    <th>{{ item.author }}</th>
+                </tr>
+            {% endfor %}        
+        </tbody>
+
+    </table>
 </div>
 {% endblock %}
