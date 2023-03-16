@@ -3,6 +3,9 @@
 {% block title %}Page TimeController - {{ parent() }} {% endblock %}
 
 {% block body %}
+
+<div class="w-75 m-auto mt-5 text-center ">
     <h1>Afficher la date, l'heure, les minutes et les secondes</h1>
-    <a href="{{ path('app_show') }}">Afficher le temps</a>
+    <a class="btn btn-primary" href="{{ path('app_show') }}">Afficher le temps</a>
+</div>
 {% endblock %}

@@ -4,7 +4,12 @@
 
 {% block body %}
 
-<h1>{{ result }}</h1>
+<div class="w-75 m-auto text-center mt-5">
+    
+    <h2>Résultat : {{ result }}</h2>
+    <a class="btn btn-primary" href="{{ path('app_search')}}">Retour</a>
+
+</div>
 
 
 {% endblock %}

@@ -14,29 +14,33 @@
         {% endblock %}
     </head>
 
+    <body>
+
+        {% set route = app.request.get('_route') %}
+
         <header class="d-flex w-75 m-auto p-1 justify-content-between bg-primary-subtle">
 
             <p class="d-flex align-items-center p-0 m-0">TP</p>
 
             <nav class="navbar navbar-expand-lg gap-3">
 
-                <div>
-                    <a href="{{ path('app_home') }}">Accueil</a>
-                    <a href="{{ path('app_article') }}">Article</a>
-                    <a href="{{ path('app_search') }}">Recherche</a>
+                <div class="border border-secondary rounded p-1">
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_home' ? 'bg-primary text-white rounded' }}" href="{{ path('app_home') }}">Accueil</a>
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_article' ? 'bg-primary text-white rounded' }}" href="{{ path('app_article') }}">Article</a>
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_search' ? 'bg-primary text-white rounded' }}" href="{{ path('app_search') }}">Recherche</a>
                 </div>
 
-                <div>
-                    <a href="{{ path('app_time') }}">Time Page</a>
-                    <a href="{{ path('app_color') }}">Color Page</a>
-                    <a href="{{ path('app_client') }}">Client Ip Page</a>
+                <div class="border border-secondary rounded p-1">
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_time' ? 'bg-primary text-white rounded' }}" href="{{ path('app_time') }}">Time Page</a>
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_color' ? 'bg-primary text-white rounded' }}" href="{{ path('app_color') }}">Color Page</a>
+                    <a class="text-secondary text-decoration-none px-2 mx-1 {{ route == 'app_client' ? 'bg-primary text-white rounded' }}" href="{{ path('app_client') }}">Client Ip Page</a>
                 </div>
 
             </nav>
             
         </header>
 
-    <body>
+
         {% block body %}{% endblock %}
     </body>
 </html>

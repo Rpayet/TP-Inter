@@ -5,13 +5,15 @@
 {% block body %}
 
 
-    <h1 style="color : {{ color }}">{{ color }}</h1>
+    <div class="w-75 m-auto text-center mt-5">
+        <h1 style="color : {{ color }}">{{ color }}</h1>
 
-    {% if color == 'red' %}
-        <p style="color : {{ color }}">Attention risque de virus</p>
-    {% endif %}
-    
+        {% if color == 'red' %}
+            <p style="color : {{ color }}">Attention risque de virus</p>
+        {% endif %}
+        
 
-    <a href="{{ path('app_color')}}">Retour</a>
+        <a href="{{ path('app_color')}}">Retour</a>
+    </div>
     
 {% endblock %}

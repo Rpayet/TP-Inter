@@ -4,15 +4,17 @@
 
 {% block body %}
 
-    <h1>Affiche une couleur à l'écran dynamiquement</h1>
+    <div class="w-50 m-auto mt-5" >
+        <h1>Affiche une couleur à l'écran dynamiquement</h1>
 
-    <ul>
-        {% for color in colors %}
-            <li>
-                <a href="{{ path('app_show_color', { color : color }) }}">{{ color }}</a>
-                
-            </li>
-        {% endfor %}
-    </ul>
+        <ul class="list-unstyled justify-content-center m-auto">
+            {% for color in colors %}
+                <li class="text-center">
+                    <a class="btn btn-secondary text-decoration-none px-2 m-2" href="{{ path('app_show_color', { color : color }) }}">{{ color }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
 
 {% endblock %}
