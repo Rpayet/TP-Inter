@@ -18,7 +18,7 @@ class ColorController extends AbstractController
         ]);
     }
 
-    #[Route('/color/{color}', name: 'app_show')]
+    #[Route('/color/{color}', name: 'app_show_color')]
     public function show($color): Response
     {
         return $this->render('color/show.html.twig', [
